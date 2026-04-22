@@ -544,7 +544,7 @@ export default function App() {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-8 right-8 z-[100] bg-gold text-black-deep p-4 rounded-full shadow-2xl shadow-gold/40 flex items-center justify-center group"
+        className="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl shadow-green-500/40 flex items-center justify-center group"
         title="Fale conosco no WhatsApp"
       >
         <MessageCircle size={28} className="group-hover:rotate-12 transition-transform duration-300" />
