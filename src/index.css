@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #C9A84C;
+  --color-ice: #F5F5F0;
+  --color-black-deep: #0A0A0A;
+  --color-black-footer: #050505;
+  --color-gray-dark: #1A1A1A;
+  --color-bg-card: #161616;
+  
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black-deep text-ice font-body selection:bg-gold selection:text-black-deep;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+  }
+
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, #1A1A1A 1px, transparent 1px), 
+      linear-gradient(to bottom, #1A1A1A 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@keyframes grow {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  50.1% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(-10%) translate(-50%, 0); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: translateY(0) translate(-50%, 0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
+
+main {
+  scroll-behavior: smooth;
+}
